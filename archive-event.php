@@ -25,7 +25,7 @@
                   echo $eventDate->format('M')
                 ?></span>
                 <span class="event-summary__day"><?php echo $eventDate->format('d') ?></span>  
-              </a>
+              </a> 
         <div class="event-summary__content">
             <h5 class="event-summary__title headline headline--tiny"><a href="<?php the_permalink( ); ?>"><?php the_title(); ?></a></h5>
             <p> <?php echo wp_trim_words(get_the_content( ), 18) ?> <a href="<?php the_permalink( ); ?>" class="nu gray">Learn more</a></p>
@@ -36,6 +36,9 @@
     echo paginate_links();
   ?>
 
+<hr class="section-break">
+<p>Looking fro a recap of our past events. <a href="<?php echo site_url( '/past-events')
+?>">Click here to see all past events...</a></p>
 </div>
 
 <?php

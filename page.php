@@ -2,19 +2,15 @@
 <?php
     get_header();
     while(have_posts()){
-        the_post(); ?>
+        the_post(); 
+        pageBanner(array(
+          'title' => 'Test title for page',
+          'subtitle' =>'Test subtitle for our page',
+          'background-photo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/%E0%A6%85%E0%A6%AA%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%87%E0%A6%AF%E0%A6%BC_%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE_06.jpg/1200px-%E0%A6%85%E0%A6%AA%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%87%E0%A6%AF%E0%A6%BC_%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE_06.jpg?20180905031413'
+        )); 
+        ?>
 
-<div class="page-banner">
-      <div class="page-banner__bg-image" 
-        style="background-image: url(<?php echo get_theme_file_uri('/images/ocean.jpg') ?>);">
-      </div>
-      <div class="page-banner__content container container--narrow">
-        <h1 class="page-banner__title"><?php the_title(); ?></h1>
-        <div class="page-banner__intro">
-          <p>Learn how the school of your dreams got started.</p>
-        </div>
-      </div>
-</div>
+
 
     <?php
       $theParent= wp_get_post_parent_id(get_the_ID());

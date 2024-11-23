@@ -24,13 +24,11 @@
         <?php echo $mapLocation['address'];?>
 
     </div>  
-  <?php
-    }
-    echo paginate_links();
+  <?php     }
   ?>
   </div>
 
-
+</div>
 <?php
   get_footer();
 ?>
